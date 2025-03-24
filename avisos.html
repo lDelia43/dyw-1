@@ -3,12 +3,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avisos</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const avisos = [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Vestibulum vel turpis ut velit venenatis viverra.",
+        "Donec efficitur purus at felis pretium, nec sodales purus interdum.",
+        "Aliquam erat volutpat. Duis vel lectus id leo consequat accumsan.",
+        "Cras a nisl eu sapien hendrerit imperdiet.",
+        "Nunc auctor justo vel augue varius, in tempus elit euismod.",
+        "Sed tincidunt ligula ut nulla molestie, vel scelerisque lectus tincidunt.",
+        "Curabitur vehicula quam eget justo fermentum, ac tincidunt mauris placerat.",
+        "Nam et odio et justo cursus malesuada at a purus.",
+        "Suspendisse potenti. Integer ac turpis eget neque tempor auctor.",
+        "Ut consequat felis nec libero feugiat, at lacinia erat viverra.",
+        "Morbi sed turpis vel lectus laoreet malesuada.",
+        "Aenean aliquet nunc eget orci aliquet, nec laoreet sapien feugiat.",
+        "Fusce ut libero a urna posuere sollicitudin vel vel ligula.",
+        "Duis feugiat nunc non felis tempor, ut suscipit ipsum egestas."
+    ];
+
+    const lista = document.getElementById("avisos");
+
+    avisos.forEach(aviso => {
+        let item = document.createElement("ul");
+        item.innerHTML = `
+            <li>${aviso}</li>
+        `;
+        lista.appendChild(item);
+    });
+});
+</script>
 <body>
     <nav>
         <ul>
-            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">index</a></li>
             <li><a href="avisos.html">Avisos</a></li>
             <li><a href="sobre-mi.html">Sobre Mí</a></li>
             <li><a href="materias-2025.html">Materias 2025</a></li>
@@ -18,10 +49,7 @@
     
     <main>
         <h1>Avisos</h1>
-        <ul>
-            <li>Diseño y Desarrollo Web: Entrega de proyecto final el 20 de junio.</li>
-            <li>Base de Datos: Examen parcial el 15 de junio.</li>
-        </ul>
+        <div id="avisos"></div>
     </main>
 </body>
 </html>
